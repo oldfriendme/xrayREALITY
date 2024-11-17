@@ -1,3 +1,4 @@
+#!/bin/bash
 echo -e "\e[32m欢迎使用REALITY一键脚本\e[0m"
 echo .
 echo "         _      _   __        _                   _ "
