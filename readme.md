@@ -45,6 +45,26 @@ xray.chuuid #重新生成uuid
 xray.delxray #彻底删除xray内核及脚本
 ```
 
+</br>
+
+## 注意事项
+> [!IMPORTANT]
+> 脚本自动生成的订阅对纯IPv6的格式处理有问题,请手动添加`[]`
+> 
+> 如IPv6为`2001:4860:1234::8888`，生成的订阅为：
+> 
+> `vless://uuid@2001:4860:1234::8888:443?encryption=none&security=reality&sni=...`
+> 
+> IPv6 `2001:4860:1234::8888`的前后
+> 
+> 应该添加`[]`
+> 
+> `vless://uuid@[2001:4860::8888]:443?encryption=none&security=reality&sni=...`
+
+其他注意事项：如果你的机器是双栈IP或者其他多IP，IP地址应该替换为实际入口IP
+
+</br></br>
+
 ## 常见问题
 ### 默认内核Xray-core v24.11.11如何更换
 脚本第53行修改
@@ -52,7 +72,7 @@ xray.delxray #彻底删除xray内核及脚本
 ### 没有相应架构怎么办
 脚本第60行接着加
 
-<br>
+</br>
 
 ### 脚本使用技术与模板
 
