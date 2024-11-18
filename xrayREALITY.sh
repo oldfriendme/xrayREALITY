@@ -71,7 +71,7 @@ xray_x25519=`/usr/xray/xray x25519`
 shortIds=`openssl rand -hex 8`
 private_old=$(echo "$xray_x25519" | grep "Private key:" | cut -d ' ' -f 3-)
 public_old=$(echo "$xray_x25519" | grep "Public key:" | cut -d ' ' -f 3-)
-echo -n '{"log": {"loglevel": "warning"},"inbounds": [{"port": ' > /usr/xray/old_config.json
+echo -n '{"log": {"loglevel": "warning"},"inbounds": [{"tag": "dokodemo-in","port": ' > /usr/xray/old_config.json
 echo -n $portx >> /usr/xray/old_config.json
 echo -n ',"listen": "'  >> /usr/xray/old_config.json
 echo -n $ipaddr >> /usr/xray/old_config.json
