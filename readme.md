@@ -12,7 +12,7 @@ xray REALITY协议一键安装脚本（2024-11-17）。
 * 支持一键更换uuid【如果旧的uuid泄露了】。
 * 支持一键重启xray。
 * 支持xray降级运行【降级为普通用户运行xray-core】。
-* 脚本加上注释只有100行左右,简单高效。
+* 脚本加上注释与配置文件只有300行左右,简单高效。
 * 脚本仅从官方下载xray,不依赖任何第三方,安全可靠。
 * 最新without being stolen（2024-11-9）科技。
 * 单用户运行。
@@ -49,34 +49,32 @@ xray.delxray #彻底删除xray内核及脚本
 
 ## 注意事项
 > [!IMPORTANT]
-> 脚本自动生成的订阅对纯IPv6的格式处理有问题,请手动添加`[]`
+> 如果你的机器是双栈IP或者其他多IP，IP地址应该替换为实际入口IP
 > 
 > 如IPv6为`2001:4860:1234::8888`，生成的订阅为：
 > 
-> `vless://uuid@2001:4860:1234::8888:443?encryption=none&security=reality&sni=...`
-> 
-> IPv6 `2001:4860:1234::8888`的前后
-> 
-> 应该添加`[]`
-> 
 > `vless://uuid@[2001:4860::8888]:443?encryption=none&security=reality&sni=...`
-
-其他注意事项：如果你的机器是双栈IP或者其他多IP，IP地址应该替换为实际入口IP
+> 
+> 但是入口为IPv4:`1.1.8.8`
+> 
+> 应该改为
+> 
+> `vless://uuid@1.1.8.8:443?encryption=none&security=reality&sni=...`
 
 </br></br>
 
 ## 常见问题
-### 默认内核Xray-core v24.11.11如何更换
-脚本第54行修改
+### 默认内核Xray-core v1.8.21如何更换
+脚本第79行修改
 
 ### 没有相应架构怎么办
-脚本第61行接着加
+脚本第86行接着加
 
 </br>
 
 ### 脚本使用技术与模板
 
-脚本使用了最新(2024-11-9)的REALITY模板进行编写
+2024-11-17脚本使用了最新(2024-11-9)的REALITY模板进行编写
 * [不会被偷跑流量的 REALITY](https://github.com/XTLS/Xray-examples/tree/main/VLESS-TCP-REALITY%20(without%20being%20stolen)) （Xray 本身就支持这种操作，这也是这个模板的原理）
 
 * [默认版本Xray-core v24.11.11](https://github.com/XTLS/Xray-core/releases/tag/v24.11.11)
