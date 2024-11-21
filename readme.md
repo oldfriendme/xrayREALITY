@@ -2,7 +2,7 @@
 
 xray REALITY install script
 
-xray REALITY协议一键安装脚本（2024-11-17）。
+xray REALITY协议一键安装脚本（2024-11-21）。
 
 ## 特点
 
@@ -12,7 +12,7 @@ xray REALITY协议一键安装脚本（2024-11-17）。
 * 支持一键更换uuid【如果旧的uuid泄露了】。
 * 支持一键重启xray。
 * 支持xray降级运行【降级为普通用户运行xray-core】。
-* 脚本加上注释与配置文件只有300行左右,简单高效。
+* 脚本简单易理解。
 * 脚本仅从官方下载xray,不依赖任何第三方,安全可靠。
 * 最新without being stolen（2024-11-9）科技。
 * 单用户运行。
