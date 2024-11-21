@@ -205,7 +205,7 @@ echo "Restart=on-failure" >> /etc/systemd/system/xray_service.service
 echo "" >> /etc/systemd/system/xray_service.service
 echo "[Install]" >> /etc/systemd/system/xray_service.service
 echo "WantedBy=multi-user.target" >> /etc/systemd/system/xray_service.service
-echo "setsid /usr/xray/sni-filter -listen $ipaddr $portx -sni $domain_s &" >> /usr/xray/xrayinit
+echo "setsid /usr/xray/sni-filter -listen $ipaddr $portx -sni $domain_s  > /dev/null 2>&1 &" >> /usr/xray/xrayinit
 echo "setsid /usr/xray/xray -c /usr/xray/sni_filter_config.json &" >> /usr/xray/xrayinit
 else
 echo "[Unit]" > /etc/systemd/system/xray_service.service
@@ -256,7 +256,7 @@ echo "echo 已关闭,正在重启xray" >> /usr/xray/closedsni
 echo "systemctl restart xray_service" >> /usr/xray/closedsni
 echo "#!/bin/bash" > /usr/xray/opensni
 echo "echo \"#!/bin/bash\" > /usr/xray/xrayinit" >> /usr/xray/opensni
-echo "echo \"setsid /usr/xray/sni-filter -listen $ipaddr $portx -sni $domain_s &\" >> /usr/xray/xrayinit" >> /usr/xray/opensni
+echo "echo \"setsid /usr/xray/sni-filter -listen $ipaddr $portx -sni $domain_s  > /dev/null 2>&1 &\" >> /usr/xray/xrayinit" >> /usr/xray/opensni
 echo "echo \"setsid /usr/xray/xray -c /usr/xray/sni_filter_config.json &\" >> /usr/xray/xrayinit" >> /usr/xray/opensni
 echo "killall xray > /dev/null 2>&1" >> /usr/xray/opensni
 echo "sleep 1" >> /usr/xray/opensni
