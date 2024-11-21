@@ -105,11 +105,11 @@ cat << EOF > /usr/xray/old_config.json
             "settings": {
                 "clients": [
                     {
-                        "id": "$id_s"
+                        "id": "$id_s",
+						"flow": "$old_flow"
                     }
                 ],
-                "decryption": "none",
-				"flow": "$old_flow"
+                "decryption": "none"
             },
             "streamSettings": {
                 "network": "tcp",
@@ -144,11 +144,11 @@ cat << EOF > /usr/xray/sni_filter_config.json
             "settings": {
                 "clients": [
                     {
-                        "id": "$id_s"
+                        "id": "$id_s",
+						"flow": "$old_flow"
                     }
                 ],
-                "decryption": "none",
-				"flow": "$old_flow"
+                "decryption": "none"
             },
             "streamSettings": {
                 "network": "tcp",
