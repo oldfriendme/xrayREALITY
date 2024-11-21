@@ -179,8 +179,7 @@ fi
 useradd xrayuser
 usermod -s /sbin/nologin xrayuser
 
-chown :xrayuser /usr/xray/old_config.json
-chown :xrayuser /usr/xray/sni_filter_config.json
+chown :xrayuser /usr/xray/*.json
 chown xrayuser /usr/xray/
 if [ $sni_filter -eq 1 ]; then
 	echo "#!/bin/bash" > /usr/xray/xrayinit
@@ -265,6 +264,7 @@ echo "echo 已打开,正在重启xray" >> /usr/xray/opensni
 echo "systemctl restart xray_service" >> /usr/xray/opensni
 mkdir /run/old
 chown xrayuser /run/old
+chmod 655 /usr/xray/sni*
 else
 echo "#!/bin/bash" > /usr/xray/chaguuid
 echo "newuuid=\`/usr/xray/xray uuid\`" >> /usr/xray/chaguuid
@@ -310,7 +310,6 @@ echo "关闭sni-filter模式->    xray.csni"
 echo "打开sni-filter模式->    xray.osni"
 echo "帮助->                  xray.help"
 EOF
-chmod 655 /usr/xray/sni*
 chmod 655 /usr/xray/*sni
 chmod 640 /usr/xray/*.json
 chmod 755 /usr/xray/delxray
