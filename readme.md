@@ -2,7 +2,7 @@
 
 xray REALITY install script
 
-xray REALITY协议一键安装脚本（2024-11-21）。
+xray REALITY协议一键安装脚本（2024-11-23）。
 
 ## 特点
 
@@ -22,6 +22,7 @@ xray REALITY协议一键安装脚本（2024-11-21）。
 
 - [x] 集成快捷指令Command【xray.start, xray.stop, xray.restart, xray.chuuid, xray.delxray】
 - [x] 单用户使用
+- [x] 支持sni-filter模式，阻止指向cdn后被偷跑流量(X64)。
 - [ ] 其他协议支持
 
 ## 软件安装
@@ -38,11 +39,12 @@ wget -N https://raw.githubusercontents.com/oldfriendme/xrayREALITY/main/xrayREAL
 
 在安装完后,可使用下列指令快速操作
 ```
-xray.start #启动xray
-xray.stop  #停止xray
-xray.restart #重启xray
-xray.chuuid #重新生成uuid
-xray.delxray #彻底删除xray内核及脚本
+xray.start     #启动xray
+xray.stop      #停止xray
+xray.restart   #重启xray
+xray.chuuid    #重新生成uuid
+xray.delxray   #彻底删除xray内核及脚本
+xray.help      #帮助
 ```
 
 </br>
@@ -65,10 +67,10 @@ xray.delxray #彻底删除xray内核及脚本
 
 ## 常见问题
 ### 默认内核Xray-core v1.8.21如何更换
-脚本第79行修改
+脚本第80行修改
 
 ### 没有相应架构怎么办
-脚本第86行接着加
+脚本第87行接着加
 
 </br>
 
@@ -77,4 +79,8 @@ xray.delxray #彻底删除xray内核及脚本
 2024-11-17脚本使用了最新(2024-11-9)的REALITY模板进行编写
 * [不会被偷跑流量的 REALITY](https://github.com/XTLS/Xray-examples/tree/main/VLESS-TCP-REALITY%20(without%20being%20stolen)) （Xray 本身就支持这种操作，这也是这个模板的原理）
 
-* [默认版本Xray-core v24.11.11](https://github.com/XTLS/Xray-core/releases/tag/v24.11.11)
+* [REALITY-sni-filter模式](https://github.com/oldfriendme/REALITY-sni-filter)
+
+* [2024-11-17默认版本Xray-core v24.11.11](https://github.com/XTLS/Xray-core/releases/tag/v24.11.11)
+
+* [2024-11-21默认版本Xray-core v1.8.21](https://github.com/XTLS/Xray-core/releases/tag/v1.8.21)
