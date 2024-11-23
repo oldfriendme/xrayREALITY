@@ -35,6 +35,17 @@ xray REALITY协议一键安装脚本（2024-11-23）。
 wget -N https://raw.githubusercontents.com/oldfriendme/xrayREALITY/main/xrayREALITY.sh && bash xrayREALITY.sh
 ```
 
+<details>
+<summary>旧版本</summary>
+  
+如果系统差异导致新脚本用不了sni-filter模式,可以尝试最旧的脚本
+  
+```
+wget -N https://raw.githubusercontents.com/oldfriendme/xrayREALITY/main/xrayREALITY-11-17.sh && bash xrayREALITY.sh
+```
+
+</details>
+
 ## 快捷指令操作
 
 在安装完后,可使用下列指令快速操作
