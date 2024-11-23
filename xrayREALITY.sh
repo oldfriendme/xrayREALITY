@@ -263,7 +263,7 @@ echo "sleep 1" >> /usr/xray/closedsni
 echo "rm /usr/xray/statusfilter" >> /usr/xray/closedsni
 echo "echo 已关闭,正在重启xray" >> /usr/xray/closedsni
 echo "systemctl restart xray_service" >> /usr/xray/closedsni
-echo "olddy=\"$realip:$portx?encryption=none&security=reality&sni=$domain_s&fp=chrome&pbk=$public_old&sid=$shortIds&type=tcp&headerType=none&host=$domain_s&flow=$old_flow#xray_REALITY\""
+echo "olddy=\"$realip:$portx?encryption=none&security=reality&sni=$domain_s&fp=chrome&pbk=$public_old&sid=$shortIds&type=tcp&headerType=none&host=$domain_s&flow=$old_flow#xray_REALITY\"" >> /usr/xray/closedsni
 echo "olduuid=\`cat /usr/xray/oldf_uuid.json\`" >> /usr/xray/closedsni
 echo "echo 新订阅为: vless://\$olduuid@\$olddy" >> /usr/xray/closedsni
 echo 
