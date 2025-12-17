@@ -2,7 +2,7 @@
 
 xray REALITY install script
 
-xray REALITY协议一键安装脚本（2024-11-23）。
+xray REALITY协议一键安装脚本（2025-12-17）。
 
 ## 特点
 
@@ -12,6 +12,7 @@ xray REALITY协议一键安装脚本（2024-11-23）。
 * 支持一键更换uuid【如果旧的uuid泄露了】。
 * 支持一键重启xray。
 * 支持xray降级运行【降级为普通用户运行xray-core】。
+* 买一赠一 【赠送Hysteria2协议（可选）】。
 * 脚本简单易理解。
 * 脚本仅从官方下载xray,不依赖任何第三方,安全可靠。
 * 最新without being stolen（2024-11-9）科技。
@@ -22,12 +23,16 @@ xray REALITY协议一键安装脚本（2024-11-23）。
 
 - [x] 集成快捷指令Command【xray.start, xray.stop, xray.restart, xray.chuuid, xray.delxray】
 - [x] 单用户使用
-- [x] 支持sni-filter模式，阻止指向cdn后被偷跑流量(X64)。
-- [ ] 其他协议支持
+- [x] 支持sni-filter模式，阻止指向cdn后被偷跑流量。
+- [ ] 其他协议支持。
 
 ## 软件安装
-注意，脚本构造简单。只支持REALITY协议，不支持其他协议
+#### 2025-12-17更新：
+- 1.sni-filter模式已成熟，默认启用。
+- 2.xray 更新到 v25.10.15
+- 3.脚本默认运行在非root用户，如果root用户执行，会自动降权到非root。【注意：如果非root启动，添加systemd启动会失败，请手动启动，也不能绑定<1024端口】
 
+<br>
 
 ### 一键安装
 
@@ -77,8 +82,8 @@ xray.help      #帮助
 </br></br>
 
 ## 常见问题
-### 默认内核Xray-core v1.8.21如何更换
-脚本第80行修改
+### 默认内核Xray-core v25.10.15如何更换
+搜索脚本”v25.10.15“关键字，修改
 
 ### 没有相应架构怎么办
 脚本第87行接着加
@@ -95,3 +100,5 @@ xray.help      #帮助
 * [2024-11-17默认版本Xray-core v24.11.11](https://github.com/XTLS/Xray-core/releases/tag/v24.11.11)
 
 * [2024-11-21默认版本Xray-core v1.8.21](https://github.com/XTLS/Xray-core/releases/tag/v1.8.21)
+
+* [2025-12-17默认版本Xray-core v25.10.15](https://github.com/XTLS/Xray-core/releases/tag/v25.10.15)
