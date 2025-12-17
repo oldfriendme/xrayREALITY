@@ -12,7 +12,6 @@ xray REALITY协议一键安装脚本（2025-12-17）。
 * 支持一键更换uuid【如果旧的uuid泄露了】。
 * 支持一键重启xray。
 * 支持xray降级运行【降级为普通用户运行xray-core】。
-* 买一赠一 【赠送Hysteria2协议（可选）】。
 * 脚本简单易理解。
 * 脚本仅从官方下载xray,不依赖任何第三方,安全可靠。
 * 最新without being stolen（2024-11-9）科技。
@@ -30,14 +29,14 @@ xray REALITY协议一键安装脚本（2025-12-17）。
 #### 2025-12-17更新：
 - 1.sni-filter模式已成熟，默认启用。
 - 2.xray 更新到 v25.10.15
-- 3.脚本默认运行在非root用户，如果root用户执行，会自动降权到非root。【注意：如果非root启动，添加systemd启动会失败，请手动启动，也不能绑定<1024端口】
+- 3.脚本默认运行在非root用户，如果root用户执行，会自动降权到非root。【注意：如果非root启动，添加systemd启动会失败，需手动启动，也不能绑定<1024端口】
 
 <br>
 
 ### 一键安装
 
 ```
-wget -N https://raw.githubusercontents.com/oldfriendme/xrayREALITY/main/xrayREALITY.sh && bash xrayREALITY.sh
+wget -N https://raw.githubusercontent.com/oldfriendme/xrayREALITY/refs/heads/main/xrayREALITY.sh && bash xrayREALITY.sh
 ```
 
 <details>
