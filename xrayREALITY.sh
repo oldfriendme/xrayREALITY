@@ -505,7 +505,7 @@ fi
 echo "echo -n \$newuuid > ${workdir}/oldf_uuid.json" >> ${workdir}/chaguuid
 echo "systemctl restart xray_service" >> ${workdir}/chaguuid
 if [[ "$ipaddr" != "" ]]; then
-echo "olddy=\"$realip:$portx?encryption=none&security=reality&sni=$domain_s&fp=chrome&pbk=$public_old&sid=$shortIds&type=tcp&headerType=none&host=$domain_s&flow=$old_flow#xray_REALITY\"" >> ${workdir}/chaguuid
+echo "olddy=\"$realip:$portx?encryption=none&flow=xtls-rprx-vision&security=reality&sni=$domain_s&fp=chrome&pbk=$public_old&sid=$shortIds&type=tcp&headerType=none&host=$domain_s&flow=$old_flow#xray_REALITY\"" >> ${workdir}/chaguuid
 fi
 if [[ "$hy2ipaddr" != "" ]]; then
 echo "oldhy2=\"$realip:$hy2portx?sni=$domain_hy2&insecure=1#hysteria2\"" >> ${workdir}/chaguuid
@@ -535,7 +535,7 @@ echo "sleep 1" >> ${workdir}/closedsni
 echo "rm ${workdir}/statusfilter" >> ${workdir}/closedsni
 echo "echo 已关闭,正在重启xray" >> ${workdir}/closedsni
 echo "systemctl restart xray_service" >> ${workdir}/closedsni
-echo "olddy=\"$realip:$portx?encryption=none&security=reality&sni=$domain_s&fp=chrome&pbk=$public_old&sid=$shortIds&type=tcp&headerType=none&host=$domain_s&flow=$old_flow#xray_REALITY\"" >> ${workdir}/closedsni
+echo "olddy=\"$realip:$portx?encryption=none&flow=xtls-rprx-vision&security=reality&sni=$domain_s&fp=chrome&pbk=$public_old&sid=$shortIds&type=tcp&headerType=none&host=$domain_s&flow=$old_flow#xray_REALITY\"" >> ${workdir}/closedsni
 echo "olduuid=\`cat ${workdir}/oldf_uuid.json\`" >> ${workdir}/closedsni
 echo "echo 订阅为: vless://\$olduuid@\$olddy" >> ${workdir}/closedsni
 fi
@@ -557,7 +557,7 @@ echo "sleep 1" >> ${workdir}/opensni
 echo "echo \"on\" > ${workdir}/statusfilter" >> ${workdir}/opensni
 echo "echo 已打开,正在重启xray" >> ${workdir}/opensni
 echo "systemctl restart xray_service" >> ${workdir}/opensni
-echo "olddy=\"$realip:$portx?encryption=none&security=reality&sni=$domain_s&fp=chrome&pbk=$public_old&sid=$shortIds&type=tcp&headerType=none&host=$domain_s&flow=$old_flow#xray_REALITY\"" >> ${workdir}/opensni
+echo "olddy=\"$realip:$portx?encryption=none&flow=xtls-rprx-vision&security=reality&sni=$domain_s&fp=chrome&pbk=$public_old&sid=$shortIds&type=tcp&headerType=none&host=$domain_s&flow=$old_flow#xray_REALITY\"" >> ${workdir}/opensni
 echo "olduuid=\`cat ${workdir}/oldf_uuid.json\`" >> ${workdir}/opensni
 echo "echo 订阅为: vless://\$olduuid@\$olddy" >> ${workdir}/opensni
 fi
@@ -644,7 +644,7 @@ echo
 echo
 
 if [[ "$ipaddr" != "" ]]; then
-echo -e "\e[32mvless://$id_s@$realip:$portx?encryption=none&security=reality&sni=$domain_s&fp=chrome&pbk=$public_old&sid=$shortIds&type=tcp&headerType=none&host=$domain_s&flow=$old_flow#xray_REALITY\e[0m"
+echo -e "\e[32mvless://$id_s@$realip:$portx?encryption=none&flow=xtls-rprx-vision&security=reality&sni=$domain_s&fp=chrome&pbk=$public_old&sid=$shortIds&type=tcp&headerType=none&host=$domain_s&flow=$old_flow#xray_REALITY\e[0m"
 fi
 
 echo ""
